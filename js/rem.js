@@ -1,4 +1,5 @@
 /* rem 自适应*/
+
 /*让文字和标签的大小随着屏幕的尺寸等比缩放*/
 var html = document.getElementsByTagName('html')[0];
 /*取到屏幕的宽度*/
