@@ -1,38 +1,14 @@
-## Welcome to GitHub Pages
+## 极光部署在 GitHub 页面上的博客
 
-You can use the [editor on GitHub](https://github.com/Aurora-creeper/Aurora-creeper.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+普通的高中生
+涉猎 java、html、css、JavaScript
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### 我的链接
 
-### Markdown
+MCBBS主页: [极光creeper(uid: 2339970)](https://www.mcbbs.net/?2339970) .
+爱发电主页: [Aurora5090](https://afdian.net/@Aurora5090) .
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### 与我联系
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-### Header 4
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Aurora-creeper/Aurora-creeper.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+邮箱: tpx1008@163.com
+QQ号: 3393863268
