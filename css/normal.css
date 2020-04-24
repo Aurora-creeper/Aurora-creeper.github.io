@@ -1,0 +1,44 @@
+body{
+	background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
+	background-blend-mode: multiply;
+}::selection{
+    background:#9ab0c0;
+    color:#fff;
+}
+#main{
+
+}
+#top{
+	position: relative;
+	overflow: hidden;
+	background-color: #333;
+}
+#top p{
+	background: #000;
+	width: 50px;
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 24px 20px;
+	text-decoration: none;
+	font-size: 17px;
+}
+#top p:hover{
+	background-color: #ddd;
+	color: black;
+	text-decoration: none;
+}
+#top p.active{
+	background-color: #4CAF50;
+	color: white;
+}
+#first{
+	width: 1000px;
+}
+#intro{
+	color: white;
+	font-size: 20px;
+	position: relative;
+	text-align: center;
+	text-shadow: 2.5px 2.5px 0.15em #34495e;
+}
