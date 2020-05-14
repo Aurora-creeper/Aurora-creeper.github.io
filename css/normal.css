@@ -1,10 +1,10 @@
 body{
-	background: #D3D3D3	;
+	background: #D3D3D3;
 	margin: 0; 
 	padding: 0; 
 }::selection{
-    background:#9ab0c0;
-    color:#fff;
+	background:#9ab0c0;
+	color:#fff;
 }
 #main{
 	
