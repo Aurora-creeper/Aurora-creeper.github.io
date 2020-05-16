@@ -1,8 +1,8 @@
 body{
 	background: #F5F5F5;
-	-webkit-keyframes: bg 5s linear infinite;
-	-o-keyframes: bg 5s linear infinite;
-	-moz-keyframes: bg 5s linear infinite;
+	-webkit-animation: bg 5s linear infinite;
+	-o-animation: bg 5s linear infinite;
+	-moz-animation: bg 5s linear infinite;
 	animation: bg 5s linear infinite;
 }
 @-webkit-keyframes bg{
@@ -37,9 +37,9 @@ body{
 	margin-bottom: 0px;
 }
 #intro{
-	-webkit-keyframes: ng 5s linear infinite;
-	-o-keyframes: ng 5s linear infinite;
-	-moz-keyframes: ng 5s linear infinite;
+	-webkit-animation: ng 5s linear infinite;
+	-o-animation: ng 5s linear infinite;
+	-moz-animation: ng 5s linear infinite;
 	animation: ng 5s linear infinite;
 }
 @-webkit-keyframes ng{
@@ -65,10 +65,10 @@ body{
 .star{
 	position: absolute;
 	-webkit-touch-callout: none;
-   -webkit-user-select: none;
-   -khtml-user-select: none;
-   -moz-user-select: none;
-   -ms-user-select: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
 	user-select: none;
 	font-size: 32px;
 	text-shadow: 1px 1px 5px #424242;
