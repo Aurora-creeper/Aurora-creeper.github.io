@@ -1,12 +1,31 @@
 body{
 	background: #F5F5F5;
+	-webkit-keyframes: bg 5s linear infinite;
+	-o-keyframes: bg 5s linear infinite;
+	-moz-keyframes: bg 5s linear infinite;
 	animation: bg 5s linear infinite;
+}
+@-webkit-keyframes bg{
+	0%   {background: #DCDCDC;}
+	50%  {background: #F5F5F5;}
+	100% {background: #DCDCDC;}
+}
+@-o-keyframes bg{
+	0%   {background: #DCDCDC;}
+	50%  {background: #F5F5F5;}
+	100% {background: #DCDCDC;}
+}
+@-moz-keyframes bg{
+	0%   {background: #DCDCDC;}
+	50%  {background: #F5F5F5;}
+	100% {background: #DCDCDC;}
 }
 @keyframes bg{
 	0%   {background: #DCDCDC;}
 	50%  {background: #F5F5F5;}
 	100% {background: #DCDCDC;}
 }
+
 /*main*/
 #intro{
 	margin-top: 150px;
@@ -18,7 +37,25 @@ body{
 	margin-bottom: 0px;
 }
 #intro{
+	-webkit-keyframes: ng 5s linear infinite;
+	-o-keyframes: ng 5s linear infinite;
+	-moz-keyframes: ng 5s linear infinite;
 	animation: ng 5s linear infinite;
+}
+@-webkit-keyframes ng{
+	0%   {filter: hue-rotate(0deg);}
+	50%  {filter: hue-rotate(360deg);}
+	100% {filter: hue-rotate(0deg);}
+}
+@-o-keyframes ng{
+	0%   {filter: hue-rotate(0deg);}
+	50%  {filter: hue-rotate(360deg);}
+	100% {filter: hue-rotate(0deg);}
+}
+@-moz-keyframes ng{
+	0%   {filter: hue-rotate(0deg);}
+	50%  {filter: hue-rotate(360deg);}
+	100% {filter: hue-rotate(0deg);}
 }
 @keyframes ng{
 	0%   {filter: hue-rotate(0deg);}
@@ -74,8 +111,6 @@ body{
 	font-size: 1rem;
 	font-size: 1.15rem;
 	font-weight: 400;
-	--font-family-sans-serif: BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-	--font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
 }
 #section-ctn h3{
 	margin-top: 0;
