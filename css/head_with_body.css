@@ -84,6 +84,9 @@ body{
 }
 .right:hover .dropdown{
 	display: block;
+	-webkit-animation: APear .15s linear forwards;
+	-o-animation: APear .15s linear forwards;
+	-moz-animation: APear .15s linear forwards;
 	animation: APear .15s linear forwards;
 }
 a#dropdown{
@@ -103,16 +106,21 @@ a#dropdown:hover{
 	background: #F1F1F1;
 	box-shadow:inset 0 0 5px 5px #f9f9f9;
 }
-@keyframes APear /*一个梨*/
-{
-	0%
-	{
-		opacity: 0;
-	}
-	100%
-	{
-		opacity: 1;
-	}
+@-webkit-keyframes APear{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+@-o-keyframes APear{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+@-moz-keyframes APear{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+@keyframes APear{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
 }
 
 
