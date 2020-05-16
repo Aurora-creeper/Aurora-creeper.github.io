@@ -1,6 +1,8 @@
 body{
 	background: #DCDCDC;
+	background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 20%, #DCDCDC 40%, #f5f7fa 60%, #c3cfe2 80%, #DCDCDC 100%);
 }
+
 /*main*/
 #intro{
 	margin-top: 120px;
@@ -11,7 +13,25 @@ body{
 	text-shadow: 2.5px 2.5px 0.15em #030d17;
 }
 #intro{
+	-webkit-keyframes: ng 6s linear infinite;
+	-o-keyframes: ng 6s linear infinite;
+	-moz-keyframes: ng 6s linear infinite;
 	animation: ng 6s linear infinite;
+}
+@-webkit-keyframes ng{
+	0%   {filter: hue-rotate(0deg);}
+	50%  {filter: hue-rotate(100deg);}
+	100% {filter: hue-rotate(0deg);}
+}
+@-o-keyframes ng{
+	0%   {filter: hue-rotate(0deg);}
+	50%  {filter: hue-rotate(100deg);}
+	100% {filter: hue-rotate(0deg);}
+}
+@-moz-keyframes ng{
+	0%   {filter: hue-rotate(0deg);}
+	50%  {filter: hue-rotate(100deg);}
+	100% {filter: hue-rotate(0deg);}
 }
 @keyframes ng{
 	0%   {filter: hue-rotate(0deg);}
