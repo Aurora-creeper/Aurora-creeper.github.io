@@ -13,9 +13,9 @@ body{
 	text-shadow: 2.5px 2.5px 0.15em #030d17;
 }
 #intro{
-	-webkit-keyframes: ng 6s linear infinite;
-	-o-keyframes: ng 6s linear infinite;
-	-moz-keyframes: ng 6s linear infinite;
+	-webkit-animation: ng 6s linear infinite;
+	-o-animation: ng 6s linear infinite;
+	-moz-animation: ng 6s linear infinite;
 	animation: ng 6s linear infinite;
 }
 @-webkit-keyframes ng{
