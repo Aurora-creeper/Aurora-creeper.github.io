@@ -2,8 +2,6 @@ body{
 	margin: 0; 
 	padding: 0; 
 	font-family: sans-serif, monospace;
-	--font-family-sans-serif: BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-	--font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
 }::selection{
     background:#9ab0c0;
     color:#fff;
@@ -12,11 +10,11 @@ body{
 	width: 12px;
 	transition: 1s;
 }
-::-webkit-scrollbar-track {/*条*/
+::-webkit-scrollbar-track {
 	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 	border-radius: 20px;
 }
-::-webkit-scrollbar-thumb {/*块*/
+::-webkit-scrollbar-thumb {
 	border-radius: 20px;
 	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 	background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -69,10 +67,11 @@ body{
 	margin-top: 20px;
 	width: 40px;
 	height: 40px;
-   border: 2px solid #90909099;
+    border: 2px solid #90909099;
 }
 .dropdown{
 	display: none;
+	opacity: 0;
 	position: absolute;
 	background-color: #f9f9f9;
 	padding: 10px;
@@ -81,6 +80,7 @@ body{
 	border-radius: 1rem;
 	box-shadow: 0px 8px 16px 0px #00000055;
 	z-index: 301;
+	transition: 1s;
 }
 .right:hover .dropdown{
 	display: block;
@@ -88,6 +88,22 @@ body{
 	-o-animation: APear .15s linear forwards;
 	-moz-animation: APear .15s linear forwards;
 	animation: APear .15s linear forwards;
+}
+@-webkit-keyframes APear{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+@-o-keyframes APear{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+@-moz-keyframes APear{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+@keyframes APear{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
 }
 a#dropdown{
 	background-color: #f9f9f9;
@@ -105,22 +121,6 @@ a#dropdown{
 a#dropdown:hover{
 	background: #F1F1F1;
 	box-shadow:inset 0 0 5px 5px #f9f9f9;
-}
-@-webkit-keyframes APear{
-	0%{opacity: 0;}
-	100%{opacity: 1;}
-}
-@-o-keyframes APear{
-	0%{opacity: 0;}
-	100%{opacity: 1;}
-}
-@-moz-keyframes APear{
-	0%{opacity: 0;}
-	100%{opacity: 1;}
-}
-@keyframes APear{
-	0%{opacity: 0;}
-	100%{opacity: 1;}
 }
 
 
@@ -141,6 +141,7 @@ a#dropdown:hover{
 .footer a:hover{
 	cursor: help;
 	color: #c0c0c0;
+	text-shadow: 0px 2px 2px rgba(0, 0, 0, 1);
 }
 .footer-div{
 	padding-top: 4%;
@@ -151,4 +152,47 @@ a#dropdown:hover{
 	height: 3px;
 	background-color: #333333;
 	margin: 0px;
+}
+
+@media screen and (max-width: 600px) {
+	#top{
+		padding-left: 8%;
+	}
+	#top a{
+		font-size: 14px;
+		width: 100px;
+		height: 20px;
+		padding: 10px;
+		margin: 8px;
+	}
+	#top a.active:hover{
+		font-size: 15px;
+	}
+	.right{
+		display: none;
+	}
+	.footer{
+		height: 90px;
+	}
+}
+@media screen and (min-width:700px) and (max-width:1023px) {
+	#top{
+		padding-left: 2%;
+	}
+	#top a{
+		font-size: 17px;
+		padding: 15px;
+		margin: 12px 8px 8px 8px ;
+		height: 25px;
+		width: 130px;
+	}
+	#top a.active:hover{
+		font-size: 18px;
+	}
+	.right{
+		display: none;
+	}
+	.footer{
+		height: 120px;
+	}
 }
