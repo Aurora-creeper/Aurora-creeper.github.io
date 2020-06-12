@@ -1,10 +1,16 @@
 body{
+	background: #a8edea;
+	background: linear-gradient(65deg, #a8edea 0%, #fed6e3 100%);
+	background-size: 110%;
+}
+/*body{
 	background: #F5F5F5;
 	-webkit-animation: bg 5s linear infinite;
 	-o-animation: bg 5s linear infinite;
 	-moz-animation: bg 5s linear infinite;
 	animation: bg 5s linear infinite;
 }
+
 @-webkit-keyframes bg{
 	0%   {background: #DCDCDC;}
 	50%  {background: #F5F5F5;}
@@ -29,7 +35,6 @@ body{
 /*main*/
 #intro{
 	margin-top: 150px;
-	color: #98dbd3;
 	font-size: 24px;
 	position: relative;
 	text-align: center;
@@ -61,6 +66,10 @@ body{
 	0%   {filter: hue-rotate(0deg);}
 	50%  {filter: hue-rotate(360deg);}
 	100% {filter: hue-rotate(0deg);}
+}
+#intro h1{
+	color: #fff;
+    text-shadow: 2.5px 2.5px 0.15em #34495e;
 }
 .star{
 	position: absolute;
@@ -105,6 +114,8 @@ body{
 
 .section-ctn{
 	background: #fff;
+	margin-left: 6rem;
+	margin-right: 6rem;
 	padding-left: 6rem;
 	color: #212529;
 	line-height: 1.5;
@@ -130,19 +141,20 @@ body{
 }
 #a{
 	border-radius: 3rem 3rem 0 0;
-	box-shadow: -10px -10px 30px #828282;
+	box-shadow: -5px -5px 10px #828282;
 }
 #b{
 	height: 500px;
 }
 #b div{
-	width: 45%;
+	width: 50%;
 	float: left;
 }
 #img-b{
 	float: left;
 	border-radius: 1rem;
-	margin-left: 10rem;
+	margin-top: 1rem;
+	margin-left: 4rem;
 	min-width: 30%;
 	max-width: 30%;
 }
@@ -150,7 +162,7 @@ body{
 #index hr{
 	margin: 0;
 	background: rgba(238,238,238);
-	height: 6px;
+	height: 3px;
 }
 
 .NO2Much,.NO2Much a{
@@ -162,4 +174,44 @@ body{
 	transition:color .13s linear;
 	color:#fff;
 	cursor: default;
+}
+
+@media screen and (max-width: 600px) {
+	.star{
+		display: none;
+	}
+	.section-ctn{
+		padding: 8px;
+		margin: 0px;
+	}
+	.section-ctn h3{
+		font-size: 15px;
+	}
+	#a{
+		border-radius: 1rem 1rem 0 0;
+	}
+	#b{
+		height: 300px;
+	}
+	#b div{
+		width: 100%;
+		float: left;
+	}
+
+	#img-b{
+		display: none;
+	}
+}
+@media screen and (min-width:700px) and (max-width:1025px) {
+	#b{
+		height: 400px;
+	}
+}
+@media(min-width: 900px) {
+	#index hr{
+		display: none;
+	}
+	.section-ctn{
+		box-shadow: 0px 0px 10px #828282;
+	}
 }
