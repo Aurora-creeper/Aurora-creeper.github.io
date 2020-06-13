@@ -1,7 +1,7 @@
 ## 极光部署在 GitHub 页面上的博客  
 
 普通的高中生  
-涉猎 java、html、css、JavaScript
+涉猎 java、Python、html、css、JavaScript
 
 ### 我的链接  
 
