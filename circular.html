@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>极光 | Boom!</title>	
+  <Link Rel="SHORTCUT ICON" href="img/stop.png">
+  <link rel="stylesheet" href="css/head_with_body.css">
+  <link rel="stylesheet" href="css/circular.css">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript">
+		function draw(){
+			var draw = document.getElementById( "draw" );
+			var content = draw.getContext( "2d" );
+			content.beginPath();
+			content.moveTo( 0, 200 );
+			for( var i = 0; i < 100; i += 0.01 ){
+				var x = i * 10;
+				var y = Math.sin( i + Math.PI) * 10 + 200;
+				content.lineTo( x, y );
+			}
+			content.stroke();
+			content.closePath();
+		}
+  </script>
+</head>
+
+<body onload="draw()">
+
+
+	<canvas id="draw" width="1000" height="400"></canvas><br>
+	<hr id="sad" width="1000">
+
+	<div>
+		<div id="section1">
+			<a>正弦型函数 可视化绘图(x≥0)</a><br>
+			<a>y = Asin(ωx+φ) + M</a><br><br>
+			<a id="example">y = Asin(ωx+φ) + M</a>
+		</div>
+		<div id="section2">
+			<div class="input">
+				<input type="text" id="a" placeholder="&nbsp;">
+				<label for="a">A *振幅</label>
+			</div>
+			<div class="input">
+				<input type="text" id="b" placeholder="&nbsp;">
+				<label for="b">ω *圆频率</label>
+				<select id="bs" class="choose">
+					<option value ="0">弧度制θ(kπ)</option>
+					<option value ="1">角度制(k°)</option>
+				</select>
+			</div>
+			<div class="input">
+				<input type="text" id="c" placeholder="&nbsp;">
+				<label for="c">φ *初相</label>
+				<select id="cs" class="choose">
+					<option value="0">弧度制θ(kπ)</option>
+					<option value="1">角度制(k°)</option>
+				</select>
+			</div>
+			<div class="input">
+				<input type="text" id="d" placeholder="&nbsp;">
+				<label for="d">M *在Y轴方向上的偏移量</label>
+			</div>
+			<div class="button">
+				<span>* 点我-></span>
+				<button class="click" onclick="doIt()">提交并绘图</button>
+				<br>
+				<a class="gray">如果刷新后页面上没有 默认的正弦函数，则说明您的浏览器不支持该功能而已</a><br>
+				<a class="gray">本页面使用了canvas(2d)对图像进行渲染，如果你想抄js部分，那请随意抄吧，萌新练手的渣作</a><br>
+				<a class="gray">*上面这个动画是css的占位符+伪类, 没用js</a><br><br>
+			</div>
+			<div class="post">
+				<p>x=0时: <a id="post-1"></a></p>
+				<p>周期T: <a id="post-2"></a></p>
+				<p>值域: <a id="post-3"></a></p><br>
+				<p id="back"><a href="boom.html" id="back">->戳我返回博客, 逃离毫无设计感的本页</a></p>
+			</div>
+		</div>
+	</div>
+
+	<!-- 页脚 喵-Start-->
+	<footer>
+		<hr id="f-hr">
+		<div class="footer">
+			<div class="footer-div">
+				© 2019-2020 Copyright:&nbsp;
+				<a href="https://www.mcbbs.net/home.php?mod=space&uid=2339970" target="_blank">Aurora5090</a>&nbsp;&nbsp;<strong>·</strong>&nbsp;&nbsp;
+				版权所有<br/><br/>
+				除 <a href="disclaimer.html" target="_blank">免责声明</a> 外，页面版权与页面内容版权属于我，未经许可不得转载，摘编，演绎。
+			</div>
+		</div>
+	</footer>
+	<!-- 页脚 喵-End  -->
+
+</body>
+
+<script>
+// 缩放比例10, 在绘图与数据计算中需要分别运算
+// canvas中y轴正负半轴相反, 在绘制时需要反向偏移
+// 如果你想, 可以改成传参的
+function doIt(){
+
+	var a = parseFloat(document.getElementById('a').value);
+	var b = (document.getElementById('bs').value == "0")?parseFloat(document.getElementById('b').value):parseFloat(document.getElementById('b').value) * Math.PI / 180;
+	var c = (document.getElementById('cs').value == "0")?parseFloat(document.getElementById('c').value):parseFloat(document.getElementById('c').value) * Math.PI / 180;
+	var d = parseFloat(document.getElementById('d').value);
+
+	console.info(a,b,c,d);
+	document.getElementById('example').innerHTML = "你画了个:y&nbsp;=&nbsp;"+a+"sin("+b+"x+"+c+")+&nbsp;"+d;
+	
+	const q = (a * Math.sin( c ) + d).toFixed(16);
+	console.info(q);
+	
+	document.getElementById('post-1').innerHTML = parseFloat(q) + parseFloat(d);
+
+	document.getElementById('post-2').innerHTML = "2π/" + b + "&nbsp;&nbsp;&nbsp;&nbsp;约为" + 2 * Math.PI / b;
+
+	var draw = document.getElementById( "draw" );
+	var content = draw.getContext( "2d" );
+	draw.height = draw.height; //初始化画布
+	content.beginPath();
+	content.moveTo(0, 200);
+	for( var i = 0; i < 100; i += 0.005 ){
+		var x = i * 10;
+		var y = a * Math.sin( b * i + c + Math.PI ) * 10 ;
+		content.lineTo( x, 200 + y - d * 10);
+	}
+	content.stroke();
+	content.closePath();
+
+	if ((d+a)>(d-a)){ //愚蠢排序
+		document.getElementById('post-3').innerHTML = "["+(d-a)+","+(d+a)+"]";
+	}else{
+		document.getElementById('post-3').innerHTML = "["+(d+a)+","+(d-a)+"]";
+	}
+}
+</script>
+</html>
