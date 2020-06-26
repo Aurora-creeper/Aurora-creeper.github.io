@@ -54,6 +54,7 @@ body{
 	margin-top: 20px;
 }
 .des--index{
+	cursor: auto;
 	width: 50%;
 	margin-left: 45px;
 	margin-top: 10px;
@@ -62,7 +63,6 @@ body{
 	transition: .1s;
 }
 .des--index:hover{
-	cursor: auto;
 	padding-top: 5px;
 	padding-left: 5px;
 	padding-bottom: 8px;
